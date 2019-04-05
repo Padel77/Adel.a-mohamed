@@ -501,7 +501,7 @@
 /*end service*/
 /*start testim*/
 .testim{
-    background-image: url(../image/pa.jpg);    
+    background-image: url(pa.jpg);    
     height: 400px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -588,7 +588,7 @@
 /* Set the size of the div element that contains the map */
  .map{
      opacity: 0.6;
-     background-image: url(../image/1.png);
+     background-image: url(1.png);
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -op-background-size: cover;
