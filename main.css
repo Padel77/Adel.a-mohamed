@@ -477,25 +477,23 @@
 .service .section-desc{
     line-height: 1.6;
     font-size: 20px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto 45px;
-    color: ;
     
 }
 .service .card{
     margin-bottom: 10px;
 }
 .service .card .card-title{
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.5;
-    color: ;
+    font-weight:bold
 }
 .service .card .card-text{
     color: #787878 ;
     margin-bottom: 10px;
 }
 .service .card .card-link{
-    color: ;
     font-weight: bold
 }
 /*end service*/
