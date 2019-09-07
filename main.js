@@ -1,22 +1,43 @@
-/*global $, document, window*/
-
+/*global $, alert, console*/
 $(function () {
     'use strict';
 
     $(document).ready(function () {
-        $('.nav-item').click(function () {
+        $('.menu').click(function () {
         
-            $('.active').toggleClass('active');
+            $('div').toggleClass('active');
     
         });
+        
     });
- 
-//Adjust slider height
-    var winh   = $(window).height(),
-        upperh = $('.upper-bar').innerHeight(),
-        navh   = $('.navbar').innerHeight();
+    function initialize() {
+
     
-    $('.slider').height(winh - (upperh + navh));
+        var mapProp = {
+        
+            center: new google.maps.LatLng(33.963745, 28.243322),
+        
+            zoom: 5,
+        
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+    
+        };
+    
+        var map = new google.maps.Map(document.getElementById("map"), mapProp);
+
+    }
+
+            
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+    
+    
+   //Adjust slider height
+    var winH = $(window).innerHeight(),
+        upperH = $('.upper-bar').innerHeight(),
+        navH = $('.navbar').innerHeight();
+    $('.slider, .carousel-item').height(winH - (upperH + navH));
+    
     
     //featured  work shuffle
     $('.features-work ul li').on('click', function () {
@@ -28,8 +49,11 @@ $(function () {
             $($(this).data('class')).parent().css('opacity', 1);
             
         }
+        
+        
     });
-    // our auto slider code    
+            // our auto slider code
+        
     $(function autoslider() {
             
         $('.logo .active').each(function () {
