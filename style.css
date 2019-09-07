@@ -236,7 +236,7 @@
 /*end about-us*/
 /*start testim*/
 .testim{
-    background-image: url(../image/10.jpg);    
+    background-image: url(10.jpg);    
     height: 400px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
