@@ -1,46 +1,57 @@
-/*global $, alert, console*/
+/*global $, document, window*/
 $(function () {
     'use strict';
 
     $(document).ready(function () {
         $('.nav-item').click(function () {
         
-            $('div').toggleClass('active');
+            $('nav-item').toggleClass('active');
     
         });
-        
     });
-    function initialize() {
-
-    
-        var mapProp = {
-        
-            center: new google.maps.LatLng(33.963745, 28.243322),
-        
-            zoom: 5,
-        
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-    
-        };
-    
-        var map = new google.maps.Map(document.getElementById("map"), mapProp);
-
-    }
-
+    //smooth nice scroll
+    $('.about').click(function () {
+        $('html, body').animate({
             
-    google.maps.event.addDomListener(window, 'load', initialize);
-    
-    
-    
-   //Adjust slider height
-    var winH = $(window).innerHeight(),
-        upperH = $('.upper-bar').innerHeight(),
-        navH = $('.navbar').innerHeight();
-    $('.slider, .carousel-item').height(winH - (upperH + navH));
-    
+            scrollTop: $("#about-us").offset().top
+            
+        }, 3000);
+    });
+    $('.service').click(function () {
+        $('html, body').animate({
+            
+            scrollTop: $("#service").offset().top
+            
+        }, 3000);
+    });
+ 
+
+    $('.client').click(function () {
+        $('html, body').animate({
+            
+            scrollTop: $("#testi").offset().top
+            
+        }, 3000);
+    });
+ 
+
+    $('.contact').click(function () {
+        $('html, body').animate({
+            
+            scrollTop: $("#contact").offset().top
+            
+        }, 3000);
+    });
+ 
+//Adjust slider height
+    var winh   = $(window).height(),
+        navh   = $('.navbar').innerHeight(),
+        upperh = $('.upper-bar').innerHeight();
+        
+    $('#slider').height(winh - (upperh + navh));
     
     //featured  work shuffle
-    $('.features-work ul li').on('click', function () {
+    $('.featured-work ul li').on('click', function () {
         $(this).addClass('active').siblings().removeClass('active');
         if ($(this).data('class') === 'all') {
             $('.shuffle-images .col-md').css('opacity', 1);
@@ -49,11 +60,8 @@ $(function () {
             $($(this).data('class')).parent().css('opacity', 1);
             
         }
-        
-        
     });
-            // our auto slider code
-        
+    // our auto slider code    
     $(function autoslider() {
             
         $('.logo .active').each(function () {
